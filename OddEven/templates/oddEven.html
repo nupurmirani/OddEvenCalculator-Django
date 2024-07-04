@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even Calculator</title>
+    <style>
+        *{
+            margin: 2vh;
+            padding: 1.5vh;
+            text-align:center;
+            font-family:"Times New Roman";
+
+        }
+        h1
+    </style>
+    
+</head>
+<body>
+    <h1>Odd Or Even Calculator</h1>
+    <form method ="POST" action = "oddEven">
+        {% csrf_token %}
+        <label for ="number">Number:</label><br>
+        <input type="number" name="number" placeholder="Enter a number" required><br>
+        <button type ="Submit">Calculate</button><br>
+        <label for ="output">Output:</label><br>
+        <input type="text"id="output" value="{% if ans %}{{ ans }}{% endif %}" value ={{ans}} readonly>
+
+
+</html>
